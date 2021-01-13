@@ -1,8 +1,6 @@
 import React from 'react';
-import {connect} from 'react-redux';
 
 const Profile = props => {
-    console.log(props)
 
     return (
         <main className='profile'>
@@ -13,8 +11,4 @@ const Profile = props => {
     )
 }
 
-//mapStateToProps lets you define what you want to subscribe to
-const mapStateToProps = reduxState => reduxState;
-
-//connect gets passed mapStateToProps and your component
-export default connect(mapStateToProps)(Profile);
+export default Profile;

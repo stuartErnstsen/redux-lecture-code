@@ -1,21 +1,13 @@
 import React from 'react';
-import {connect} from 'react-redux';
 
 const Header = props => {
-    console.log(props)
 
     return (
         <header className='main-header'>
             <h1>Pokemon Trainer</h1>
-            <h1>{props.userReducer.user.username}</h1>
+            {/* <h1>Place Username here</h1> */}
         </header>
     )
 }
 
-const mapStateToProps = reduxState => {
-    return {
-        userReducer: reduxState.userReducer
-    }
-}
-
-export default connect(mapStateToProps)(Header);
+export default Header;
