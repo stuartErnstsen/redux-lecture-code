@@ -30,8 +30,8 @@ class Dashboard extends Component {
             <main className='dashboard'>
                 <h1>Your Pokemon</h1>
                 <section>
-                    <img src={this.state.pokemon.sprites.front_default} alt={this.props.pokeReducer.pokemon.data?.name}/>
-                    <h3>{this.state.pokemon.name}</h3>
+                    <img src={pokemon.sprites.front_default} alt={pokemon.name}/>
+                    <h3>{pokemon.name}</h3>
                     <button>Change Pokemon</button>
                 </section>
             </main>
