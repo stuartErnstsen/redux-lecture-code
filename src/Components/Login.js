@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux';
+import { getUser } from '../ducks/reducer';
 
 class Login extends Component {
     constructor(props){
@@ -16,6 +18,15 @@ class Login extends Component {
 
     login = (e) => {
         e.preventDefault();
+        const userObj = {
+            username: this.state.username,
+            age: this.state.age,
+            email: this.state.email
+        }
+        //Call getUser with userObj as payload
+        this.props.getUser(userObj);
+        //Navigate the user to dashboard page
+        this.props.history.push('/dashboard')
     }
 
     render(){
@@ -34,4 +45,6 @@ class Login extends Component {
     }
 }
 
-export default Login;
+
+
+export default connect(null, {getUser})(Login);
